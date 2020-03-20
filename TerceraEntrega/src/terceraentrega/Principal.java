@@ -65,7 +65,9 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void parqueaderoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parqueaderoActionPerformed
-        
+        Parqueadero ob1 = new Parqueadero();
+        ob1.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_parqueaderoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
