@@ -28,7 +28,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("INGLES????");
+        jButton2.setText("TEATRO");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -71,7 +71,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_parqueaderoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-      
+      Teatro ob2 = new Teatro();
+      ob2.setVisible(true);
+      this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public static void main(String args[]) {

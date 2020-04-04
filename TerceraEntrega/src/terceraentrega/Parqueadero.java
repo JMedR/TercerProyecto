@@ -5,7 +5,6 @@ public class Parqueadero extends javax.swing.JFrame {
     public Parqueadero() {
         initComponents();
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -31,6 +30,10 @@ public class Parqueadero extends javax.swing.JFrame {
         volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(999, 999));
+        setMinimumSize(new java.awt.Dimension(1, 1));
+        setPreferredSize(new java.awt.Dimension(560, 520));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         agregar.setLayout(null);
@@ -120,11 +123,11 @@ public class Parqueadero extends javax.swing.JFrame {
         agregar.add(nuevo);
         nuevo.setBounds(20, 330, 340, 50);
 
-        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 74, 564, 391));
+        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 564, 391));
 
         pres.setFont(new java.awt.Font("Consolas", 1, 33)); // NOI18N
         pres.setText("PARQUEADERO");
-        getContentPane().add(pres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 28, -1, -1));
+        getContentPane().add(pres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         volver.setText("Volver");
         volver.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +135,7 @@ public class Parqueadero extends javax.swing.JFrame {
                 volverActionPerformed(evt);
             }
         });
-        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 476, -1, -1));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 450, 75, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -148,7 +151,9 @@ public class Parqueadero extends javax.swing.JFrame {
     }//GEN-LAST:event_mesActionPerformed
 
     private void mVelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mVelActionPerformed
-        // TODO add your handling code here:
+     
+        
+        
     }//GEN-LAST:event_mVelActionPerformed
 
     /**
