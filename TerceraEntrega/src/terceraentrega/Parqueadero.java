@@ -1,200 +1,210 @@
 package terceraentrega;
 
 public class Parqueadero extends javax.swing.JFrame {
-    // Aqui las variables globales
-    int año,mes,dia,hora,min,seg,sel,agregar;
-    
+
     public Parqueadero() {
         initComponents();
-        
-        
     }
-    
+
     @SuppressWarnings("unchecked")
-    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        nuevo = new javax.swing.JButton();
-        textoMostrar = new javax.swing.JLabel();
+        agregar = new javax.swing.JPanel();
+        Info1 = new javax.swing.JLabel();
+        nProp = new javax.swing.JTextField();
+        mVel = new javax.swing.JTextField();
+        pVel = new javax.swing.JTextField();
+        año = new javax.swing.JTextField();
+        mes = new javax.swing.JTextField();
+        dia = new javax.swing.JTextField();
+        hora = new javax.swing.JTextField();
+        min = new javax.swing.JTextField();
+        am = new javax.swing.JRadioButton();
+        pm = new javax.swing.JRadioButton();
+        Info2 = new javax.swing.JLabel();
+        bicicleta = new javax.swing.JButton();
         moto = new javax.swing.JButton();
         carro = new javax.swing.JButton();
-        bicicleta = new javax.swing.JButton();
-        recibirInfo = new javax.swing.JTextField();
-        continuar = new javax.swing.JButton();
+        nuevo = new javax.swing.JButton();
+        pres = new javax.swing.JLabel();
+        volver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Volver");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        agregar.setLayout(null);
+
+        Info1.setFont(new java.awt.Font("Consolas", 1, 20)); // NOI18N
+        Info1.setText("INGRESE LOS SIGUIENTES DATOS:");
+        agregar.add(Info1);
+        Info1.setBounds(20, 10, 320, 24);
+
+        nProp.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        nProp.setText("Nombre del Propietario");
+        agregar.add(nProp);
+        nProp.setBounds(20, 50, 250, 25);
+
+        mVel.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        mVel.setText("Model del vehiculo");
+        mVel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                mVelActionPerformed(evt);
             }
         });
+        agregar.add(mVel);
+        mVel.setBounds(290, 50, 250, 25);
 
-        jLabel1.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
-        jLabel1.setText("PARQUEADERO");
+        pVel.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        pVel.setText("Placa del vehiculo");
+        agregar.add(pVel);
+        pVel.setBounds(20, 90, 250, 25);
 
-        nuevo.setText("Nuevo vehiculo");
-        nuevo.addActionListener(new java.awt.event.ActionListener() {
+        año.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        año.setText("AA");
+        agregar.add(año);
+        año.setBounds(20, 130, 45, 20);
+
+        mes.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        mes.setText("MM");
+        mes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nuevoActionPerformed(evt);
+                mesActionPerformed(evt);
             }
         });
+        agregar.add(mes);
+        mes.setBounds(70, 130, 45, 20);
 
-        textoMostrar.setFont(new java.awt.Font("Consolas", 1, 15)); // NOI18N
-        textoMostrar.setText("Seleccione el vehiculo que va a ingresar");
+        dia.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        dia.setText("DD");
+        agregar.add(dia);
+        dia.setBounds(120, 130, 45, 20);
+
+        hora.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        hora.setText("Hora");
+        agregar.add(hora);
+        hora.setBounds(20, 160, 45, 20);
+
+        min.setFont(new java.awt.Font("Consolas", 0, 15)); // NOI18N
+        min.setText("Min");
+        agregar.add(min);
+        min.setBounds(70, 160, 45, 20);
+
+        am.setText("am");
+        agregar.add(am);
+        am.setBounds(120, 160, 50, 23);
+
+        pm.setText("pm");
+        agregar.add(pm);
+        pm.setBounds(170, 160, 50, 23);
+
+        Info2.setFont(new java.awt.Font("Consolas", 1, 20)); // NOI18N
+        Info2.setText("¿QUE TIPO DE VEHICULO ES?");
+        agregar.add(Info2);
+        Info2.setBounds(20, 210, 320, 24);
+
+        bicicleta.setText("BICICLETA");
+        agregar.add(bicicleta);
+        bicicleta.setBounds(20, 250, 100, 50);
 
         moto.setText("MOTO");
-        moto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                motoActionPerformed(evt);
-            }
-        });
+        agregar.add(moto);
+        moto.setBounds(140, 250, 100, 50);
 
         carro.setText("CARRO");
-        carro.addActionListener(new java.awt.event.ActionListener() {
+        agregar.add(carro);
+        carro.setBounds(260, 250, 100, 50);
+
+        nuevo.setFont(new java.awt.Font("Consolas", 3, 20)); // NOI18N
+        nuevo.setText("AGREGAR VEHICULO");
+        agregar.add(nuevo);
+        nuevo.setBounds(20, 330, 340, 50);
+
+        getContentPane().add(agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 74, 564, 391));
+
+        pres.setFont(new java.awt.Font("Consolas", 1, 33)); // NOI18N
+        pres.setText("PARQUEADERO");
+        getContentPane().add(pres, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 28, -1, -1));
+
+        volver.setText("Volver");
+        volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                carroActionPerformed(evt);
+                volverActionPerformed(evt);
             }
         });
-
-        bicicleta.setText("BICICLETAS");
-        bicicleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bicicletaActionPerformed(evt);
-            }
-        });
-
-        recibirInfo.setEditable(false);
-        recibirInfo.setFont(new java.awt.Font("Consolas", 1, 15)); // NOI18N
-        recibirInfo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recibirInfoActionPerformed(evt);
-            }
-        });
-
-        continuar.setText("Continuar");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(continuar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(textoMostrar)
-                        .addComponent(recibirInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(moto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(carro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(bicicleta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(nuevo)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(19, 19, 19))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(moto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(carro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bicicleta, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                        .addComponent(nuevo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
-                        .addGap(12, 12, 12))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(textoMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(recibirInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(continuar)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 476, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
         this.setVisible(false);
         Principal ob = new Principal();
         ob.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
-    private void nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nuevoActionPerformed
-        //String a;
-        //a = jTextArea1.getText();
-        //jTextArea2.setText(a);
-        moto.setVisible(true);
-        carro.setVisible(true);
-        bicicleta.setVisible(true);
-        textoMostrar.setText("Seleccione el vehiculo que va a ingresar");
-        agregar = 0;
-    }//GEN-LAST:event_nuevoActionPerformed
-    private void motoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_motoActionPerformed
-        //textoMostrar.setText(String.valueOf(validacion)); >>Mostrar un int como string
-        moto.setVisible(false);
-        carro.setVisible(false);
-        bicicleta.setVisible(false);
-        
-        
-        
-    }//GEN-LAST:event_motoActionPerformed
-    private void carroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carroActionPerformed
-        moto.setVisible(false);
-        carro.setVisible(false);
-        bicicleta.setVisible(false);   
-        
-        
-        
-    }//GEN-LAST:event_carroActionPerformed
-    private void bicicletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bicicletaActionPerformed
-        moto.setVisible(false);
-        carro.setVisible(false);
-        bicicleta.setVisible(false);    
-        
-        
-        
-    }//GEN-LAST:event_bicicletaActionPerformed
+    }//GEN-LAST:event_volverActionPerformed
 
-    private void recibirInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recibirInfoActionPerformed
-    }//GEN-LAST:event_recibirInfoActionPerformed
+    private void mesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mesActionPerformed
+
+    private void mVelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mVelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mVelActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Parqueadero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Parqueadero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Parqueadero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Parqueadero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Parqueadero().setVisible(true);
             }
         });
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Info1;
+    private javax.swing.JLabel Info2;
+    private javax.swing.JPanel agregar;
+    private javax.swing.JRadioButton am;
+    private javax.swing.JTextField año;
     private javax.swing.JButton bicicleta;
     private javax.swing.JButton carro;
-    private javax.swing.JButton continuar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField dia;
+    private javax.swing.JTextField hora;
+    private javax.swing.JTextField mVel;
+    private javax.swing.JTextField mes;
+    private javax.swing.JTextField min;
     private javax.swing.JButton moto;
+    private javax.swing.JTextField nProp;
     private javax.swing.JButton nuevo;
-    private javax.swing.JTextField recibirInfo;
-    private javax.swing.JLabel textoMostrar;
+    private javax.swing.JTextField pVel;
+    private javax.swing.JRadioButton pm;
+    private javax.swing.JLabel pres;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
