@@ -181,15 +181,15 @@ public class Parqueadero extends javax.swing.JFrame {
         jPanel1.add(Info3);
         Info3.setBounds(20, 10, 280, 24);
 
-        mosCarro.setText("jLabel1");
+        mosCarro.setText("De x vehiculos hay: 0");
         jPanel1.add(mosCarro);
         mosCarro.setBounds(20, 60, 250, 20);
 
-        mosMoto.setText("jLabel2");
+        mosMoto.setText("De x motos hay: 0");
         jPanel1.add(mosMoto);
         mosMoto.setBounds(20, 35, 250, 20);
 
-        mosBicicleta.setText("jLabel3");
+        mosBicicleta.setText("De x bicicletas hay: 0");
         jPanel1.add(mosBicicleta);
         mosBicicleta.setBounds(270, 35, 250, 20);
 
